@@ -1,0 +1,32 @@
+<div class="container-fluid col-4 py-5">
+  <form (ngSubmit)="login()">
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">🤓</span>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="loginForm.username"
+        [ngModelOptions]="{ standalone: true }"
+        placeholder="Username..."
+      />
+    </div>
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">🔐</span>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="loginForm.password"
+        [ngModelOptions]="{ standalone: true }"
+        placeholder="Password..."
+      />
+    </div>
+    <p *ngIf="error !== ''">{{ error }}</p>
+    <button type="submit" class="btn btn-dark">Login</button>
+  </form>
+  <div class="form-text my-3">
+    <p>
+      Not registered?
+      <a routerLink="/register" class="text-bg-info p-1">Sign up instead</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<!-- <div id="registerContainer">
+  <form (ngSubmit)="register()">
+    <input
+      type="text"
+      [(ngModel)]="registerForm.username"
+      [ngModelOptions]="{ standalone: true }"
+      placeholder="Username..."
+    />
+    <p *ngIf="error.username !== ''">{{ error.username }}</p>
+    <input
+      type="text"
+      [(ngModel)]="registerForm.email"
+      [ngModelOptions]="{ standalone: true }"
+      placeholder="Email..."
+    />
+    <p *ngIf="error.email !== ''">{{ error.email }}</p>
+    <input
+      type="password"
+      [(ngModel)]="registerForm.password"
+      [ngModelOptions]="{ standalone: true }"
+      placeholder="Password..."
+    />
+    <p *ngIf="error.password !== ''">{{ error.password }}</p>
+    <input
+      type="password"
+      [(ngModel)]="registerForm.rPassword"
+      [ngModelOptions]="{ standalone: true }"
+      placeholder="Repeat password..."
+    />
+    <p *ngIf="error.rPassword !== ''">{{ error.rPassword }}</p>
+    <button type="submit">Register!</button>
+  </form> -->
+
+<div class="container-fluid col-4 py-5">
+  <form (ngSubmit)="register()">
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">🤓</span>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="registerForm.username"
+        [ngModelOptions]="{ standalone: true }"
+        placeholder="Username..."
+      />
+      <p *ngIf="error.username !== ''">{{ error.username }}</p>
+    </div>
+
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">✉️</span>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="registerForm.email"
+        [ngModelOptions]="{ standalone: true }"
+        placeholder="Email..."
+      />
+      <p *ngIf="error.email !== ''">{{ error.email }}</p>
+    </div>
+
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">🔐</span>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="registerForm.password"
+        [ngModelOptions]="{ standalone: true }"
+        placeholder="Password..."
+      />
+      <p *ngIf="error.password !== ''">{{ error.password }}</p>
+    </div>
+
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">🔐</span>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="registerForm.rPassword"
+        [ngModelOptions]="{ standalone: true }"
+        placeholder="Repeat password..."
+      />
+      <p *ngIf="error.rPassword !== ''">{{ error.rPassword }}</p>
+    </div>
+
+    <button type="submit" class="btn btn-info">Register</button>
+  </form>
+  <div class="form-text my-3">
+    <p>
+      Already registered?
+      <a routerLink="/login" class="text-bg-warning p-1">Log in</a>
+    </p>
+  </div>
+</div>

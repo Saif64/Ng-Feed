@@ -1,0 +1,15 @@
+#container {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  height: 5%;
+  width: 100%;
+}
+a {
+  display: flex;
+  justify-content: center;
+  padding-inline: 2%;
+  padding-top: 5px;
+}
