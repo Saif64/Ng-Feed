@@ -24,11 +24,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./register/register.module').then((m) => m.RegisterModule),
   },
-  // {
-  //   path: 'search',
-  //   loadChildren: () =>
-  //     import('./pages/search/serach.module').then((m) => m.SearchModule),
-  // },
 
   // { path: 'stories/:username', component: StoriesComponent },
   // { path: 'newStory', component: NewStoryComponent },
