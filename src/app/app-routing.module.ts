@@ -25,8 +25,8 @@ const routes: Routes = [
       import('./register/register.module').then((m) => m.RegisterModule),
   },
 
-  // { path: 'stories/:username', component: StoriesComponent },
-  // { path: 'newStory', component: NewStoryComponent },
+  { path: 'stories/:username', component: StoriesComponent },
+  { path: 'newStory', component: NewStoryComponent },
 ];
 
 @NgModule({

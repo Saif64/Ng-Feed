@@ -21,24 +21,25 @@
       </div>
     </div>
   </nav>
-  <!-- <div id="stories">
-      <li id="noSeen" *ngFor="let story of stories">
-        <a [routerLink]="['/stories/' + story.user.username]">
-          <div id="noSeenImg">
-            <img [src]="story.user.pic" />
-          </div>
-          <p>{{ story.user.username }}</p>
-        </a>
-      </li>
-      <li id="alreadySeen" *ngFor="let story of storiesAlreadySeen">
-        <a [routerLink]="['/stories/' + story.user.username]">
-          <div>
-            <img [src]="story.user.pic" />
-          </div>
-          <p>{{ story.user.username }}</p>
-        </a>
-      </li>
-    </div> -->
+
+  <!-- <div class="">
+    <li id="noSeen" *ngFor="let story of stories">
+      <a [routerLink]="['/stories/' + story.user.username]">
+        <div id="noSeenImg">
+          <img [src]="story.user.pic" />
+        </div>
+        <p>{{ story.user.username }}</p>
+      </a>
+    </li>
+    <li id="alreadySeen" *ngFor="let story of storiesAlreadySeen">
+      <a [routerLink]="['/stories/' + story.user.username]">
+        <div>
+          <img [src]="story.user.pic" />
+        </div>
+        <p>{{ story.user.username }}</p>
+      </a>
+    </li>
+  </div> -->
 
   <app-post-list></app-post-list>
 </div>
