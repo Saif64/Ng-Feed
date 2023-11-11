@@ -1,25 +1,31 @@
-<a href="">
-  <h5>back</h5>
-</a>
-<form (submit)="publish()">
-  <textarea
-    [(ngModel)]="newPost.description"
-    [ngModelOptions]="{ standalone: true }"
-    placeholder="Say something about your pic!"
-  ></textarea>
-  <div>
-    <label for="image">
-      Select Image <br />
-      <input
-        type="file"
-        id="image"
-        accept="image/*"
-        (change)="newImage($event)"
-      />
-      <br />
-    </label>
-    <img [src]="newPost.image" />
-  </div>
+<div class="container">
+  <a href="" class="d-block mb-3">
+    <h5>Back</h5>
+  </a>
 
-  <button type="submit">Publish</button>
-</form>
+  <form (submit)="publish()">
+    <div class="form-group">
+      <textarea
+        [(ngModel)]="newPost.description"
+        [ngModelOptions]="{ standalone: true }"
+        placeholder="Say something about your pic!"
+        class="form-control"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="image" class="d-block">
+        Select Image <br />
+        <input
+          type="file"
+          id="image"
+          accept="image/*"
+          (change)="newImage($event)"
+          class="form-control-file"
+        />
+      </label>
+      <img [src]="newPost.image" class="img-fluid mt-3" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Publish</button>
+  </form>
+</div>

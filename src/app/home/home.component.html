@@ -22,24 +22,46 @@
     </div>
   </nav>
 
-  <!-- <div class="">
-    <li id="noSeen" *ngFor="let story of stories">
-      <a [routerLink]="['/stories/' + story.user.username]">
-        <div id="noSeenImg">
-          <img [src]="story.user.pic" />
-        </div>
-        <p>{{ story.user.username }}</p>
-      </a>
-    </li>
-    <li id="alreadySeen" *ngFor="let story of storiesAlreadySeen">
-      <a [routerLink]="['/stories/' + story.user.username]">
-        <div>
-          <img [src]="story.user.pic" />
-        </div>
-        <p>{{ story.user.username }}</p>
-      </a>
-    </li>
-  </div> -->
+  <div class="container">
+    <ul class="list-unstyled">
+      <li *ngFor="let story of stories" class="mb-3">
+        <a [routerLink]="['/stories/' + story.user.username]">
+          <div class="d-flex align-items-center">
+            <div
+              class="rounded-circle bg-warning"
+              style="width: 40px; height: 40px; overflow: hidden"
+            >
+              <img
+                [src]="story.user.pic"
+                alt="{{ story.user.username }}"
+                class="img-fluid"
+                style="object-fit: cover; width: 100%; height: 100%"
+              />
+            </div>
+            <p class="ml-3 mb-0">{{ story.user.username }}</p>
+          </div>
+        </a>
+      </li>
+      <li *ngFor="let story of storiesAlreadySeen" class="mb-3">
+        <a [routerLink]="['/stories/' + story.user.username]">
+          <div class="d-flex align-items-center">
+            <div
+              class="rounded-circle bg-info"
+              style="width: 40px; height: 40px; overflow: hidden"
+            >
+              <img
+                [src]="story.user.pic"
+                alt="{{ story.user.username }}"
+                class="img-fluid"
+                style="object-fit: cover; width: 100%; height: 100%"
+              />
+            </div>
+          </div>
+          <p class="ml-3 mb-0">{{ story.user.username }}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <app-post-list></app-post-list>
 </div>
